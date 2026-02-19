@@ -72,10 +72,10 @@
             <AutoLogon>
                 <Enabled>true</Enabled>
                 <LogonCount>1</LogonCount>
-                <Username>User</Username>
+                <Username>USERNAME_PLACEHOLDER</Username>
                 <Password>
                     <PlainText>false</PlainText>
-                    <Value>MQAyADMANAA1ADYAUABhAHMAcwB3AG8AcgBkAA==</Value>
+                    <Value>PASSWORD_PLACEHOLDER</Value>
                 </Password>
             </AutoLogon>
             <FirstLogonCommands>
@@ -96,10 +96,10 @@
                 <LocalAccounts>
                     <LocalAccount wcm:action="add">
                         <Group>Administrators</Group>
-                        <Name>User</Name>
+                        <Name>USERNAME_PLACEHOLDER</Name>
                         <Password>
                             <PlainText>false</PlainText>
-                            <Value>MQAyADMANAA1ADYAUABhAHMAcwB3AG8AcgBkAA==</Value>
+                            <Value>PASSWORD_PLACEHOLDER</Value>
                         </Password>
                     </LocalAccount>
                 </LocalAccounts>

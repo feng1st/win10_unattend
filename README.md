@@ -8,6 +8,7 @@ This project provides automation scripts to build a custom Windows 10 IoT Enterp
 
 Ensure you have the following tools installed on your Linux host:
 - `mkisofs` (part of the `cdrtools` package)
+- `iconv` (usually installed by default)
 
 Example installation on Fedora/RHEL:
 ```bash
@@ -38,6 +39,8 @@ Download the following files and place them in the project root directory. Ensur
     ```bash
     bash build_iso.sh
     ```
+    The script will prompt you to enter a **Username** and **Password** for the Windows administrator account.
+
     *Note: The script uses `sudo mount` to read the contents of the source ISOs. It automatically cleans up mount points upon completion.*
 
 3.  **Output**:
@@ -77,7 +80,7 @@ Create a new Virtual Machine in `virt-manager` or use `virt-install` with the fo
     -   The installer loads VirtIO storage drivers automatically.
     -   Partitions and formats the disk.
     -   Installs Windows 10 IoT Enterprise LTSC.
-    -   Creates a local administrator account (`User`) with password `123456` and logs in automatically.
+    -   Creates a local administrator account (using the **credentials provided during the build**) and logs in automatically.
 3.  **First System Boot (FirstLogon.cmd)**:
     -   Installs the VirtIO Guest Tools and SPICE Guest Tools.
     -   Disables hibernation, system restore, and pagefile (to save space).
